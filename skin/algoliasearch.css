@@ -35,6 +35,19 @@
   background-color: white;
 }
 
+/* CLEAR REFINEMENTS */
+.ais-clear-all {
+  border: 1px solid #39C;
+  padding: 7px;
+  text-align: center;
+}
+
+.ais-clear-all a, .ais-clear-all a:hover {
+  color: #54A5CD;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 /* REFINEMENT LIST */
 .ais-hierarchical-menu--item__active > div > .ais-hierarchical-menu--link,
 .ais-refinement-list--item__active > div > .ais-hierarchical-list--link,

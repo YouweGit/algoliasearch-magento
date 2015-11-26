@@ -217,6 +217,7 @@ if (count($sections) > 0)
         <div class="row">
             <div class="col-md-3" id="algolia-left-container">
                 <div id="refine-toggle" class="visible-xs visible-sm">+ <?php echo $this->__('Refine'); ?></div>
+                <div class="hidden-xs hidden-sm" id="instant-search-clear-refinements-container"></div>
                 <div class="hidden-xs hidden-sm" id="instant-search-facets-container"></div>
             </div>
 
@@ -502,6 +503,17 @@ if (count($sections) > 0)
 
                     search.addWidget(widget);
                 });
+
+                /** ClearAll **/
+                search.addWidget(
+                    algoliaBundle.instantsearch.widgets.clearAll({
+                        container: '#instant-search-clear-refinements-container',
+                        cssClass: 'algolia-clear-refinements',
+                        templates: {
+                          link: '<?php echo $this->__('Clear refinements'); ?>'
+                        }
+                    })
+                );
 
                 /** Pagination **/
                 search.addWidget(
